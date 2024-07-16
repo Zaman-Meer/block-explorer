@@ -1,9 +1,11 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import "@/scripts/updateBlocks";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import "./globals.css";
+import { startCronJob } from "@/scripts/cronJob";
+
+startCronJob();
 
 const inter = Inter({ subsets: ["latin"] });
 

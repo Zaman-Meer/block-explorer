@@ -68,7 +68,7 @@ const BlocksList: React.FC = () => {
             className="ml-4 p-2 border rounded-lg bg-blue-500 text-white hover:bg-blue-600 transition"
           >
             {`Toggle Display Mode for All (${
-              displayMode === "hex" ? "Hex" : "Decimal"
+              displayMode === "hex" ? "Decimal" : "Hexadecimal"
             })`}
           </button>
         </div>

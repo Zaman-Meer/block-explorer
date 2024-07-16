@@ -1,9 +1,8 @@
-import cron from "node-cron";
 import Block from "@/models/Block";
 import { fetchBlockByNumber } from "@/utils/fetchBlocks";
 import dbConnect from "@/utils/dbConnect";
 
-const updateBlocks = async () => {
+export const updateBlocks = async (): Promise<void> => {
   await dbConnect();
 
   try {
@@ -18,7 +17,6 @@ const updateBlocks = async () => {
       hash: latestBlock.hash,
     };
 
-    // Use updateOne with upsert
     await Block.updateOne(
       { hash: blockData.hash },
       { $set: blockData },
@@ -30,6 +28,3 @@ const updateBlocks = async () => {
     console.error("Error fetching or saving block:", error);
   }
 };
-
-// Schedule the updateBlocks function to run every 30 seconds
-cron.schedule("*/30 * * * * *", updateBlocks);
