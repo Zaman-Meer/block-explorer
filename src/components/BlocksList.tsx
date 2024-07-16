@@ -49,7 +49,7 @@ const BlocksList: React.FC = () => {
     <div className="container min-h-screen mx-auto p-6 bg-white rounded-lg shadow-md">
       <h1 className="text-3xl font-bold text-center mb-6">Block Explorer</h1>
 
-      <div className="flex justify-between items-center gap-4 flex-wrap mb-4">
+      <div className="flex justify-between items-center gap-4 flex-wrap mb-4 border-b border-gray-300">
         <SortDropdown
           sortField={sortField}
           setSortField={setSortField}
