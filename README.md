@@ -11,7 +11,6 @@ A full-stack block explorer application that retrieves and displays data about r
 - [API Endpoints](#api-endpoints)
 - [Components](#components)
 - [Database Schema](#database-schema)
-- [Testing](#testing)
 - [Deployment](#deployment)
 - [Technical Choices](#technical-choices)
 - [Feedback](#feedback)
@@ -165,7 +164,6 @@ const BlockSchema = new mongoose.Schema({
 
 const Block = mongoose.model('Block', BlockSchema);
 export default Block;
-
 
 
 # Deployment
